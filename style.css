@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bad+Script&family=Inspiration&family=Tangerine&display=swap');
+
+/* Font families */
+/* font-family: 'Acme', sans-serif;
+font-family: 'Bad Script', cursive;
+font-family: 'Inspiration', cursive;
+font-family: 'Tangerine', cursive; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    border-radius: 45%;
+    height: 50%;
+    width: 50%;
+    margin-top: 5px;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #1478bc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c808b2;
+    text-decoration: underline;
+}
+
+.countdown-vote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon {
+    /* border: 5px solid blue; */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.gsf {
+    /* border: 5px solid black; */
+    font-size: 1.2rem;
+    font-family: 'Bad Script', sans-serif;
+    position: absolute;
+    top: 20px;
+    right: -400px;
+}
+
+.csh2 {
+    font-family: 'Inspiration', cursive;
+    font-size: 80px;
+}
+
+.csh3 {
+    font-family: 'Acme', sans-serif;
+    font-size: 1.5rem;
+}
+
+.countdown {
+    /* border: 5px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hidden {
+    display: none;
+}
+
+.day,
+.hour,
+.minute,
+.seconds {
+    font-family: 'Acme', sans-serif;
+    font-size: 2.6rem;
+    color: #c808b2;
+}
+
+.bsfont {
+    font-family: 'Bad Script', cursive;
+    font-size: 2.4rem;
+    color: #1478bc;
+    margin-top: -10px;
+}
+
+.final-reveal {
+    animation: fadeIn ease 15s;
+    -webkit-animation: fadeIn ease 15s;
+    -moz-animation: fadeIn ease 15s;
+    -o-animation: fadeIn ease 15s;
+    -ms-animation: fadeIn ease 15s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* .poll {
+    width: 400px;
+    padding: 1.5rem;
+    margin: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.poll__title {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Bad Script', cursive;
+    margin-bottom: 1.5rem;
+}
+
+.poll__option:hover {
+    cursor: pointer;
+}
+
+.poll__option:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.poll__option--selected .poll__option-fill {
+    background: linear-gradient(to left, #a1d9ff, #ff82f0);
+    border-radius: 5px;
+}
+
+.poll__option--selected .poll__option-info {
+    font-weight: bold;
+}
+
+.poll__option-fill {
+    width: 50%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.poll__option-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-family: 'Acme', cursive;
+} */
