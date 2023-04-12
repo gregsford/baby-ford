@@ -31,6 +31,13 @@ img {
     margin-top: 5px;
 }
 
+.qmark {
+    border-radius: 0%;
+    height: 50%;
+    width: 50%;
+    margin-top: 5px;
+}
+
 a:link,
 a:visited,
 a:active {
@@ -62,9 +69,9 @@ a:hover {
     /* border: 5px solid black; */
     font-size: 1.2rem;
     font-family: 'Bad Script', sans-serif;
-    position: absolute;
+    /* position: absolute;
     top: 20px;
-    right: -400px;
+    right: -400px; */
 }
 
 .csh2 {
@@ -104,11 +111,11 @@ a:hover {
 }
 
 .final-reveal {
-    animation: fadeIn ease 15s;
-    -webkit-animation: fadeIn ease 15s;
-    -moz-animation: fadeIn ease 15s;
-    -o-animation: fadeIn ease 15s;
-    -ms-animation: fadeIn ease 15s;
+    animation: fadeIn ease 40s;
+    -webkit-animation: fadeIn ease 40s;
+    -moz-animation: fadeIn ease 40s;
+    -o-animation: fadeIn ease 40s;
+    -ms-animation: fadeIn ease 40s;
 }
 
 @keyframes fadeIn {
@@ -207,3 +214,20 @@ a:hover {
     font-size: 2rem;
     font-family: 'Acme', cursive;
 } */
+
+@media only screen and (max-width: 480px) {
+    .csh2 {
+        font-family: 'Inspiration', cursive;
+        font-size: 2rem;
+    }
+
+    .csh3 {
+        font-family: 'Acme', sans-serif;
+        font-size: 1rem;
+    }
+
+    .bsfont {
+        font-size: 1.2rem;
+        margin-top: -10px;
+    }
+}
