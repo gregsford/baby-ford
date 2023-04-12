@@ -1,5 +1,5 @@
 const countdown = () => {
-    const countDate = new Date("July 1, 2023 12:00:00").getTime();
+    const countDate = new Date("April 11, 2023 23:10:00").getTime();
     const now = new Date().getTime();
     const timeGap = countDate - now;
 
@@ -14,6 +14,7 @@ const countdown = () => {
     const secondsDisplay = Math.floor((timeGap % minute) / seconds);
 
     const finalReveal = document.querySelector('.final-reveal');
+    const qMark = document.querySelector('.qmark');
 
     document.querySelector('.day').textContent = dayDisplay;
     document.querySelector('.hour').textContent = hourDisplay;
@@ -29,7 +30,7 @@ const countdown = () => {
         document.querySelector('.seconds').textContent = "0";
 
         finalReveal.classList.remove("hidden");
-
+        qMark.classList.add("hidden");
     }
 };
 
