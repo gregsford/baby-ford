@@ -38,68 +38,68 @@ setInterval(() => {
     countdown()
 }, 1000);
 
-// class Poll {
-//     constructor(root, title) {
-//         this.root = root;
-//         this.selected = sessionStorage.getItem("poll-selected");
-//         this.endpoint = "http://localhost:3000/poll";
+ class Poll {
+     constructor(root, title) {
+         this.root = root;
+         this.selected = sessionStorage.getItem("poll-selected");
+         this.endpoint = "http://localhost:3000/poll";
 
-//         this.root.insertAdjacentHTML("afterbegin", `
-//             <div class="poll__title">${title}</div>
-//         `);
+         this.root.insertAdjacentHTML("afterbegin", `
+             <div class="poll__title">${title}</div>
+         `);
 
-//         this._refresh();
-//     }
+         this._refresh();
+     }
 
-//     async _refresh() {
-//         const response = await fetch(this.endpoint);
-//         const data = await response.json();
+     async _refresh() {
+         const response = await fetch(this.endpoint);
+         const data = await response.json();
 
-//         this.root.querySelectorAll(".poll_option").forEach(option => {
-//             option.remove();
-//         });
+         this.root.querySelectorAll(".poll_option").forEach(option => {
+             option.remove();
+         });
 
-//         for (const option of data) {
-//             const template = document.createElement("template");
-//             const fragment = template.content;
+         for (const option of data) {
+             const template = document.createElement("template");
+             const fragment = template.content;
 
-//             template.innerHTML = `
-//                 <div class="poll__option ${this.selected == option.label ? "poll__option--selected" : ""}">
-//                     <div class="poll__option-fill"></div>
-//                     <div class="poll__option-info">
-//                         <span class="poll__label">${option.label}</span>
-//                         <span class="poll__percentage">${option.percentage}%</span>
-//                     </div>
-//                 </div>
-//             `;
+             template.innerHTML = `
+                 <div class="poll__option ${this.selected == option.label ? "poll__option--selected" : ""}">
+                     <div class="poll__option-fill"></div>
+                     <div class="poll__option-info">
+                         <span class="poll__label">${option.label}</span>
+                         <span class="poll__percentage">${option.percentage}%</span>
+                     </div>
+                 </div>
+             `;
 
-//             if (!this.selected) {
-//                 fragment.querySelector(".poll__option").addEventListener("click", () => {
-//                     fetch(this.endpoint, {
-//                         method: "post",
-//                         body: `add=${option.label}`,
-//                         headers: {
-//                             "Content-Type": "application/x-www-form-urlencoded"
-//                         }
-//                     }).then(() => {
-//                         this.selected = option.label;
+             if (!this.selected) {
+                 fragment.querySelector(".poll__option").addEventListener("click", () => {
+                     fetch(this.endpoint, {
+                         method: "post",
+                         body: `add=${option.label}`,
+                         headers: {
+                             "Content-Type": "application/x-www-form-urlencoded"
+                         }
+                     }).then(() => {
+                         this.selected = option.label;
 
-//                         sessionStorage.setItem("poll-selected", option.label);
-//                         this._refresh();
-//                     })
-//                 });
-//             }
+                         sessionStorage.setItem("poll-selected", option.label);
+                         this._refresh();
+                     })
+                 });
+             }
 
-//             fragment.querySelector(".poll__option-fill").style.width = `${option.percentage}%`;
+             fragment.querySelector(".poll__option-fill").style.width = `${option.percentage}%`;
 
-//             this.root.appendChild(fragment);
-//         }
-//     }
-// }
+             this.root.appendChild(fragment);
+         }
+     }
+ }
 
-// const p = new Poll(
-//     document.querySelector(".poll"),
-//     "Which gender do you think Baby Ford will be?"
-// );
+ const p = new Poll(
+     document.querySelector(".poll"),
+     "Which gender do you think Baby Ford will be?"
+ );
 
-// console.log(p);
+ console.log(p);
